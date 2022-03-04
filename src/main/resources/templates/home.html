@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Husnoro | Homepage</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
+    <script src="https://kit.fontawesome.com/4baffb7ed7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="hat">
+        <span><i class="fa-solid fa-location-dot fa-xl" style="color: white"></i>   <span th:text="${address}"></span></span>
+        <span><i class="fa-solid fa-envelope fa-xl" style="color: white"></i>   <span th:text="${email}"></span></span>
+        <span><i class="fa-solid fa-phone fa-xl" style="color: white"></i>   <span th:text="${number}"></span></span>
+
+
+        <a class="social" th:href="${instagram}" title="instagram"><i class="fa-brands fa-instagram fa-xl" style="color: white"></i></a>
+        <a class="social" th:href="${linkedin}" title="linkedin"><i class="fa-brands fa-linkedin fa-xl" style="color: white"></i></a>
+        <a class="social" th:href="${facebook}" title="facebook"><i class="fa-brands fa-facebook fa-xl" style="color: white"></i></a>
+
+
+    </div>
+
+    <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+    <img class="slider" th:src="@{/img/1.jpeg}">
+    <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
+</body>
+</html>

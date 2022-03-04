@@ -1,0 +1,95 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.hat{
+    background-color:rgb(0, 119, 255);
+    padding: 20px;
+}
+
+.hat span{
+    color: white;
+    padding-right: 20px;
+}
+
+.nav{
+    background-color:rgba(65, 195, 255, 0.527);
+    margin: 0;
+}
+
+.nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav li a h1{
+    margin-right: 350px;
+    margin-left: 80px;
+}
+
+.menuButton{
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+.appointment{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-right: 60px;
+    background-color: violet;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.slider{
+    max-width: 100%;
+}
+
+.icon{
+    width: 20px;
+    height: auto;
+    color: white;
+}
+
+.foot{
+    background-color: #008cff;
+    padding: 10px;
+}
+
+.con-info{
+    margin-right: 685px;
+}
+
+.social{
+    padding-right: 30px;
+
+}
+/**************************************/
+/************************************/
+
+    /* ERROR PAGE STYLE*/
+
+/************************************/
+/**************************************/
+
+.error{
+    text-align: center;
+    color: #008cff;
+    margin-top: 10%;
+}
+.oops{
+    font-size: 100px;
+}
+
+.show-way, .not-found-txt, .not-found{
+    font-size: 18px;
+}
+
+
+
