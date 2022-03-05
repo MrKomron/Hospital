@@ -1,6 +1,5 @@
-package com.example.demo.model;
+package be.thomasmore.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
@@ -13,7 +12,6 @@ public class News {
     private String lastname;
     private Date birthdate;
     private String gender;
-    private Date date;
     private String history;
 
     public News() {
@@ -25,7 +23,7 @@ public class News {
         this.lastname = lastname;
         this.birthdate = birthdate;
         this.gender = gender;
-        this.date = date;
+
         this.history = history;
     }
 
@@ -79,11 +77,5 @@ public class News {
         this.lastname = lastname;
     }
 
-    public Date getDate() {
-        return date;
-    }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 }

@@ -1,4 +1,4 @@
-package com.example.demo;
+package be.thomasmore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

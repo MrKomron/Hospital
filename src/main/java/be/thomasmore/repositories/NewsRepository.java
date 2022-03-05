@@ -1,6 +1,6 @@
-package com.example.demo.repositories;
+package be.thomasmore.repositories;
 
-import com.example.demo.model.News;
+import be.thomasmore.model.News;
 import org.springframework.data.repository.CrudRepository;
 
 public interface NewsRepository extends CrudRepository<News, Integer> {
