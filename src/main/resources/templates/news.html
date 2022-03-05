@@ -12,6 +12,17 @@
 
 </head>
 <body>
-<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+    <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<!--        <p th:text="${newsall}"></p>-->
+    <div th:each="newsall : ${newsall}">
+        <span th:text="${newsall.getFirstname()}+' '+${newsall.getLastname()}">firstname and lastname</span>
+        <a href="#" th:text="${newsall.getHistory()}">Title ...</a>
+        <p th:text="${newsall.getDate()}"></p>
+
+    </div>
+
+
+
+    <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>

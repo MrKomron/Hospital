@@ -13,6 +13,7 @@ public class News {
     private Date birthdate;
     private String gender;
     private String history;
+    private Date date;
 
     public News() {
     }
@@ -23,7 +24,7 @@ public class News {
         this.lastname = lastname;
         this.birthdate = birthdate;
         this.gender = gender;
-
+        this.date=date;
         this.history = history;
     }
 
@@ -77,5 +78,11 @@ public class News {
         this.lastname = lastname;
     }
 
+    public Date getDate() {
+        return date;
+    }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }

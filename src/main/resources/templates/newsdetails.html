@@ -1,0 +1,65 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Husnoro | Newsdetails</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
+    <script th:src="@{https://kit.fontawesome.com/4baffb7ed7.js}" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+<!--<div class="venuedetail">-->
+<!--    <div class="row1content">-->
+<!--        <div th:if="${prev!=null}" class="prevButtonDiv">-->
+<!--            <a class="buttonLook smallButton" th:href="@{'/newsdetails/' + ${prev}}">&lt;</a>-->
+<!--        </div>-->
+<!--        <div th:if="${next!=null}" class="nextButtonDiv">-->
+<!--            <a class="buttonLook smallButton" th:href="@{'/newsdetails/' + ${next}}">&gt;</a>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+<!--<div class="row1content" th:if="${venue}">-->
+<!--    <h2 th:if="${venue.getVenueName()}" th:text="|${venue.getVenueName()}|">venue: onbekend</h2>-->
+<!--    <p th:unless="${venue.getVenueName()}">venue: onbekend</p>-->
+<!--    <br>-->
+<!--    <div class="info">Info : </div>-->
+<!--    <div><p><a th:href="@{${venue.getLinkMoreInfo()}}">https://yandex.ru</a></p></div>-->
+<!--    <br>-->
+<!--    <div class="info">Capacity : </div>-->
+<!--    <div><p th:text="${venue.getCapacity()}">capacity venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">isFoodProvided? : </div>-->
+<!--    <div><p th:text="${venue.isFoodProvided() ? 'yes' : 'no'}">food venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">isIndoor : </div>-->
+<!--    <div><p th:text="${venue.isIndoor() ? 'yes' : 'no'}">indoor venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">isOutdoor : </div>-->
+<!--    <div><p th:text="${venue.isOutdoor() ? 'yes' : 'no'}">outdoor venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">isFreeParkingAvailable? : </div>-->
+<!--    <div><p th:text="${venue.isFreeParkingAvailable() ? 'yes' : 'no'}">parking venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">Distance from public transport in km : </div>-->
+<!--    <div><p th:text="${venue.getDistanceFromPublicTransportInKm()}">distance venue</p></div>-->
+<!--    <br>-->
+<!--    <div class="info">City : </div>-->
+<!--    <div><p th:text="${venue.getCity()}">city venue</p></div>-->
+<!--</div>-->
+<!--<div class="row1content" th:unless="${venue}">-->
+<!--    <p>no venue was chosen</p>-->
+<!--</div>-->
+
+</body>
+</html>
