@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Husnoro | Samecode</title>
 </head>
 <body>
 <div th:fragment="navbar">
@@ -11,16 +11,24 @@
             <li><a class="menuButton" th:href="@{/home}">Home</a></li>
             <li><a class="menuButton" th:href="@{/about}">About</a></li>
             <li><a class="menuButton" th:href="@{/services}">Services</a></li>
-            <li><a class="menuButton" th:href="@{/about}">Pages</a></li>
+            <li class="dropdown">
+                <a class="menuButton" th:href="@{/pages}">Pages</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/gallery}">Gallery</a>
+                    <a th:href="@{/team}">Team</a>
+                    <a th:href="@{/careers}">Careers</a>
+                    <a th:href="@{/partners}">Partners</a>
+                    <a th:href="@{/faq}">FAQ</a>
+                </div>
+            </li>
             <li><a class="menuButton" th:href="@{/news}">News</a></li>
             <li><a class="menuButton" th:href="@{/contact}">Contact</a></li>
             <li><a class="appointment" th:href="@{/appointment}">Appointment</a></li>
-            <li><a class="login" th:href="@{/login}" title="LogIn"><span><i class="fa-solid fa-right-to-bracket fa-xl" style="color: rgb(0, 119, 255)"></i></span></a></li>
-
+            <li><a class="login" th:href="@{/login}"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: rgb(0, 119, 255)"></i></a></li>
     </ul>
 </div>
 
-<div th:fragment="footer">
+<div th:fragment="footer" class="footer">
     <div class="foot">
         <p th:text="'&copy; copywrite Husnoro'+ ' ' +${dateNow}"></p>
     </div>

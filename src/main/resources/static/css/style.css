@@ -100,3 +100,62 @@ body{
 
 
 
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d32020;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+.foot {
+    height: 50px;
+    flex-shrink: 0;
+    background-color: #134c7d;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/**************************************/
+/************************************/
+
+/* SERVICES PAGE STYLE*/
+
+/************************************/
+/**************************************/
+
+.serv li{
+    list-style-type: none;
+    margin: 20px;
+    background-color: #008cff;
+    font-size: 20px;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    color: white;
+    border: 3px solid blue;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px #00fa45;
+}

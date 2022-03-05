@@ -1,4 +1,4 @@
 package com.example.demo.repositories;
 
-public interface Home {
+public interface HomeRepository {
 }

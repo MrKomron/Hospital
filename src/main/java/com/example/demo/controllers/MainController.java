@@ -49,6 +49,36 @@ public class MainController {
         return "pages";
     }
 
+    @GetMapping({"/gallery"})
+    public String gallery(Model model){
+
+        return "gallery";
+    }
+
+    @GetMapping({"/team"})
+    public String team(Model model){
+
+        return "team";
+    }
+
+    @GetMapping({"/careers"})
+    public String careers(Model model){
+
+        return "careers";
+    }
+
+    @GetMapping({"/partners"})
+    public String partners(Model model){
+
+        return "partners";
+    }
+
+    @GetMapping({"/faq"})
+    public String faq(Model model){
+
+        return "faq";
+    }
+
     @GetMapping({"/news"})
     public String news(Model model){
 
@@ -59,5 +89,11 @@ public class MainController {
     public String contact(Model model){
 
         return "contact";
+    }
+
+    @GetMapping({"/login"})
+    public String login(Model model){
+
+        return "login";
     }
 }
