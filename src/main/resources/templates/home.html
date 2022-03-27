@@ -90,29 +90,32 @@
 
 
 <!--OPENING HOURS-->
-<div class="open-hours" th:style="'background: url(/img/2.jpg)'">
-    djdjd
+<div class="open-hours" th:style="'background: url(/img/2.jpg); z-index:-1; height:800px'">
     <div>
-        <form action="" >
-            <div class="oneinput">
-                <label for="firstname" class="info">Firstname: </label>
-                <input type="text" id="firstname" class="editfield">
+        <form action="">
+            <h1>Make an appointment</h1>
+            <div>
+                <label for="firstname" class="appointment-context">Firstname: </label>
+                <input type="text" id="firstname" class="input-style">
             </div>
-            <div class="oneinput">
-                <label for="lastname" class="info">Lastname: </label>
-                <input type="text" id="lastname" class="editfield">
+            <div>
+                <label for="lastname" class="appointment-context">Lastname: </label>
+                <input type="text" id="lastname" class="input-style">
             </div>
-            <div class="oneinput">
-                <label for="phonenumber" class="info">Phonenumber: </label>
-                <input type="tel" id="phonenumber" class="editfield">
+            <div>
+                <label for="phonenumber" class="appointment-context">Phonenumber: </label>
+                <input type="tel" id="phonenumber" class="input-style">
             </div>
-            <div class="oneinput">
-                <label for="department" class="info">Department: </label>
-                <input type="text" id="department" class="editfield">
+            <div>
+                <label for="department" class="appointment-context">Department: </label>
+                <input type="text" id="department" class="input-style">
             </div>
-            <div class="oneinput">
-                <label for="date" class="info">Date: </label>
-                <input type="date" id="date" class="editfield">
+            <div>
+                <label for="date" class="appointment-context">Date: </label>
+                <input type="date" id="date" class="input-style">
+            </div>
+            <div>
+                <input type="submit" class="submit-button" value="submit">
             </div>
         </form>
         <div class="working-hours">
@@ -122,6 +125,7 @@
     </div>
 
 </div>
+<br>
 
 <!-- OUR SERVICES -->
 <div class="services">

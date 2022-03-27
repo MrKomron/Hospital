@@ -162,9 +162,10 @@ video{
 .services h1{
     display: flex;
     justify-content: center;
-    margin: 80px;
+
     font-size: 80px;
     font-family: Lobster;
+    margin-top: 200px;
 }
 
 .services-style{
@@ -208,15 +209,61 @@ video{
 
 .open-hours form{
     float: left;
-    width: 50%;
+    width: 30%;
+    margin: 50px;
+    background: rgba(128, 55, 255, 0.74);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.open-hours form label{
+    display: inline-block;
+    margin: 25px 20px;
+    text-align: left;
+    width: 150px;
+    font-family: Lobster;
+    font-size: 25px;
+}
+
+.open-hours form h1{
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-style{
+    border-radius: 9px;
+    padding: 6px 12px;
+    border: 3px solid #ffb610;
+    outline: none;
 }
 
 .working-hours{
     background: rgba(0, 0, 0, 0.2);
-    width: 50%;
+    width: 55%;
+    margin: 50px;
     float: right;
 }
 
 .working-hours h1{
     font-family: Lobster;
+    text-align: center;
+    color: white;
 }
+
+.appointment-context{
+    margin-right: 60px;
+}
+
+.open-hours form .submit-button{
+    margin-left: 150px;
+    outline: red;
+    padding: 12px 24px;
+    border: 3px solid blue;
+    background: blue;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+}
+
