@@ -240,16 +240,23 @@ video{
 }
 
 .working-hours{
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.46);
     width: 55%;
     margin: 50px;
     float: right;
+    height: 700px;
 }
 
 .working-hours h1{
     font-family: Lobster;
     text-align: center;
     color: white;
+    margin: 30px;
+}
+
+.working-hours p{
+    margin: 20px;
+    color: #b4b4b4;
 }
 
 .appointment-context{
