@@ -18,3 +18,52 @@ VALUES (6, 'Dianna','Moss','1989-07-07','female','none', '2022-06-22');
 
 INSERT INTO NEWS (ID, FIRSTNAME, LASTNAME, BIRTHDATE, GENDER, HISTORY, DATE)
 VALUES (7, 'Jose','French','1999-07-07','male','none', '2022-06-22');
+
+
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Cell Surgery','click here');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Nose Surgery','click me');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Cell Therapy','click');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Body Contouring','click');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Facial Contouring','click');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
+
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
+
+
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME,LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO)
+VALUES (nextval('DOCTORS_SEQ'),'Mike','Denver',28,'example@com.com','123456789','some text some text some text');

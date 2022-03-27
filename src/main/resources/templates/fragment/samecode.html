@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Husnoro | Samecode</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<div th:fragment="navbar">
-    <ul class="nav" id="navbar">
-            <li><a class="logo" th:href="@{/home}"><h1>HUSNORO</h1></a></li>
+<div th:fragment="top">
+    <div class="hat">
+        <span class="first-line"><i class="fa-solid fa-location-dot fa-xl" style="color: white"></i><span class="text-hat">12 Mikrorayon, Khujand, Tajikistan</span></span>
+        <span class="first-line"><i class="fa-solid fa-envelope fa-xl" style="color: white"></i><span class="text-hat">example@gmail.com</span></span>
+        <span class="first-line non"><i class="fa-solid fa-phone fa-xl" style="color: white"></i><span class="text-hat">+992 92 622 5060</span></span>
+        <a class="social " th:href="@{${'https://www.instagram.com/'}}" title="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a class="social " th:href="@{${'https://www.linkedin.com/'}}" title="linkedin"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a class="social " th:href="@{${'https://www.facebook.com/'}}" title="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
+    </div>
+</div>
+
+<div class="margin-break" th:fragment="navbar">
+    <ul class="navigation">
+            <li><a class="logo-menu" th:href="@{/home}"><h1>HUSNORO</h1></a></li>
             <li><a class="menuButton" th:href="@{/home}">Home</a></li>
             <li><a class="menuButton" th:href="@{/about}">About</a></li>
             <li><a class="menuButton" th:href="@{/services}">Services</a></li>
-            <li class="dropdown">
-                <a class="menuButton" th:href="@{/pages}">Pages</a>
-                <div class="dropdown-content">
-                    <a th:href="@{/gallery}">Gallery</a>
-                    <a th:href="@{/team}">Team</a>
-                    <a th:href="@{/careers}">Careers</a>
-                    <a th:href="@{/partners}">Partners</a>
-                    <a th:href="@{/faq}">FAQ</a>
+            <li>
+                <div class="dropdown">
+                <a class="menuButton dropbtn" th:href="@{/pages}">Pages</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/gallery}">Gallery</a>
+                        <a th:href="@{/team}">Team</a>
+                        <a th:href="@{/careers}">Careers</a>
+                        <a th:href="@{/partners}">Partners</a>
+                        <a th:href="@{/faq}">FAQ</a>
+                    </div>
                 </div>
             </li>
             <li><a class="menuButton" th:href="@{/news}">News</a></li>
-            <li><a class="menuButton" th:href="@{/contact}">Contact</a></li>
+            <li><a class="menuButton distance" th:href="@{/contact}">Contact</a></li>
             <li><a class="appointment" th:href="@{/appointment}">Appointment</a></li>
-            <li><a class="login" th:href="@{/login}"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: rgb(0, 119, 255)"></i></a></li>
+            <li><a class="login-menu" th:href="@{/login}"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a></li>
     </ul>
 </div>
 
-<div th:fragment="footer" class="footer">
-    <div class="foot">
-        <p th:text="'&copy; copywrite Husnoro'+ ' ' +${dateNow}"></p>
-    </div>
-</div>
+<!--<div th:fragment="footer" class="footer">-->
+<!--    <div class="foot">-->
+<!--        <p th:text="'&copy; copywrite Husnoro'+ ' ' +${dateNow}"></p>-->
+<!--    </div>-->
+<!--</div>-->
 
 </body>
 </html>
