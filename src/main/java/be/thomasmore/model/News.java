@@ -1,32 +1,32 @@
 package be.thomasmore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
 public class News {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "news_generator")
+    @SequenceGenerator(name = "news_generator", sequenceName = "news_seq", allocationSize = 1)
     @Id
     private Integer id;
     private String firstname;
     private String lastname;
+    private int age;
     private Date birthdate;
     private String gender;
+    @Column(length = 10000)
     private String history;
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
     public News() {
     }
 
-    public News(Integer id, String firstname, String lastname, Date birthdate, String gender, Date date, String history) {
-        this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.birthdate = birthdate;
-        this.gender = gender;
-        this.date=date;
-        this.history = history;
-    }
+
 
     public Integer getId() {
         return id;
@@ -84,5 +84,13 @@ public class News {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

@@ -1,8 +1,10 @@
 package be.thomasmore.controllers;
 
 import be.thomasmore.model.Doctors;
+import be.thomasmore.model.News;
 import be.thomasmore.model.Services;
 import be.thomasmore.repositories.DoctorsRepository;
+import be.thomasmore.repositories.NewsRepository;
 import be.thomasmore.repositories.ServicesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,8 @@ public class MainController {
     private ServicesRepository servicesRepository;
     @Autowired
     private DoctorsRepository doctorsRepository;
+    @Autowired
+    private NewsRepository newsRepository;
 
     @GetMapping({"/","/home"})
     public String home(Model model){
@@ -34,6 +38,9 @@ public class MainController {
 
         Iterable<Doctors> allDoctors=doctorsRepository.findAll();
         model.addAttribute("doctors",allDoctors);
+
+        Iterable<News> allNews=newsRepository.findAll();
+        model.addAttribute("news",allNews);
 
         return "home";
     }

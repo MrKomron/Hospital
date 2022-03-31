@@ -19,8 +19,8 @@
 <!--        <p th:text="${newsall}"></p>-->
     <div th:each="newsall : ${newsall}">
         <span th:text="${newsall.getFirstname()}+' '+${newsall.getLastname()}">firstname and lastname</span>
-        <a href="#" th:text="${newsall.getHistory()}">Title ...</a>
-        <p th:text="${newsall.getDate()}"></p>
+        <p th:text="${#dates.format(newsall.getBirthdate(),'yyyy-mm-dd')}"></p>
+    
 
     </div>
 

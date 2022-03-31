@@ -17,17 +17,13 @@ public class NewsController {
     private NewsRepository newsRepository;
     @GetMapping({"/news"})
     public String news(Model model){
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy");
-        String formatDateTime = now.format(format);
-        model.addAttribute("dateNow",formatDateTime);
-
         Iterable<News> optionalVenue = newsRepository.findAll();
         model.addAttribute("newsall", optionalVenue);
 
 
         return "news";
     }
+
 
 
 

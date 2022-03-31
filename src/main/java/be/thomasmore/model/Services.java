@@ -9,7 +9,6 @@ public class Services {
     @Id
     private Integer id;
     private String name;
-
     private String Information;
 
 

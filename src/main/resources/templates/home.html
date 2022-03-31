@@ -146,38 +146,18 @@
 </div>
 
 
+<!-- LATEST NEWS-->
+<div class="news">
+    <h1>Latest News</h1>
+    <form action="">
+        <input type="submit" value="View all news">
+    </form>
+    <div class="doctors-style" th:each="doc : ${news}">
+    <p th:text="${doc.getFirstname()}">firstname and lastname</p><br>
+    <!--        <a href="#" >More information</a>-->
+</div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--    <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>-->
+    <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>

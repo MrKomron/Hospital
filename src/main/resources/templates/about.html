@@ -12,6 +12,57 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">About</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/about</li>
+    </ul>
+</div>
+
+<div class="img-and-text">
+    <img th:src="@{/img/welcome.jpg}">
+    <div class="text">
+        <h1>Welcome to Husnoro</h1>
+        <p>Treatments for the plastic repair of a broken nose are first mentioned in an ancient Egypt medical text called the Edwin Smith papyrus.[7][8] The early trauma surgery textbook was named after the American Egyptologist, Edwin Smith.[8] Reconstructive surgery techniques were being carried out in India by 800 BC.[9] Sushruta was a physician who made contributions to the field of plastic and cataract surgery in the 6th century BC.[10] Sushruta's developments were preserved in his book, Sushruta Samhita.</p>
+    </div>
+</div>
+
+
+<div class="three-cards">
+    <ul>
+    <li class="first-card">
+        <i class="fas fa-phone-alt fa-4x" aria-hidden="true"></i>
+        <h2>Customer Support</h2>
+        <p>The Romans also performed plastic cosmetic surgery, using simple techniques, such as repairing damaged ears, from around the 1st century BC. </p>
+    </li>
+        <li class="second-card">
+            <i class="fas fa-phone-alt fa-4x" aria-hidden="true"></i>
+            <h2>Customer Support</h2>
+            <p>The Romans also performed plastic cosmetic surgery, using simple techniques, such as repairing damaged ears, from around the 1st century BC. </p>
+        </li>
+        <li class="third-card">
+            <i class="fas fa-phone-alt fa-4x" aria-hidden="true"></i>
+            <h2>Customer Support</h2>
+            <p>The Romans also performed plastic cosmetic surgery, using simple techniques, such as repairing damaged ears, from around the 1st century BC. </p>
+        </li>
+    </ul>
+</div>
+
+<div class="appointment-bline">
+    <p>If you are a patient seeking quality healthcare at affordable prices!</p>
+    <input type="submit" value="Make an appointment">
+</div>
+
+<div class="about-team">
+<h1>Meet our team</h1>
+
+</div>
+
+
 <!--<div th:replace="fragment/samecode :: footer">Hier komt de footer</div>-->
 </body>
 </html>
