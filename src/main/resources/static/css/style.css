@@ -386,6 +386,27 @@ video{
 }
 
 
+.about-team div{
+    margin: 15px 25px 0 45px;
+    width: 20%;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 12px 12px 0 0;
+}
+
+.about-team div img{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.about-team div a{
+    color: black;
+text-align: center;
+}
+
+.about-team div p{
+    text-align: center;
+}
 
 
 
@@ -401,47 +422,112 @@ video{
     font-family: Lobster;
 }
 
-.foot{
-    background: darkgray;
-    height: 500px;
+
+.footer{
+    background-color: #303036;
+    color: crimson;
+    height: 400px;
+    position: relative;
+    margin-top: 200px;
 }
 
-.foot p{
-    margin: 0;
-}
-
-.footer-main{
+.footer .footer-bottom{
+    background-color: #ffb610;
+    color: #5c5291;
+    height: 50px;
+    text-align: center;
+    position: absolute;
     width: 100%;
-    display: inline-block;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
 }
 
-.footer-1{
-    width: 20%;
-    float: left;
+.footer .footer-content{
+    height: 350px;
+    display: flex;
 }
 
-.footer-2{
-    width: 20%;
+.footer .footer-content .footer-section{
+    flex: 1;
+    padding: 25px;
 }
 
-.footer-2 a{
+.footer .footer-content h1,
+.footer .footer-content h2{
+    color: #fff;
+}
+
+.footer .footer-content .about h1 span{
+    color: #0099ef;
+}
+
+.footer .footer-content .about .contact span{
     display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
 }
 
-.footer-3{
-    width: 25%;
-}
 
-.footer-3 li{
-   list-style-type: none;
-    padding: 5px;
-}
-
-.footer-email-form{
-    width: 20%;
-    float: right;
-}
-
-.footer-heading{
+.footer .footer-content .about .socials a{
+    border: 1px solid greenyellow;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
     display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+}
+
+.footer .footer-content .links{
+    margin-left: 150px;
+}
+
+.footer .footer-content .links ul a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+
+}
+
+.contact-form form{
+    width: 50%;
+}
+
+.contact-form form input,textarea{
+    width: 150%;
+}
+
+.btn-big{
+    background-color: #5c5291;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-big:hover{
+    background-color: green;
+}
+
+.footer .footer-content .contact-form .contact-input{
+    background-color: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+.footer .footer-content .contact-form .contact-input:focus{
+    background-color: #1a1a1a;
+}
+
+.footer .footer-content .links ul a:hover{
+    color: white;
+    margin-left: 15px;
+    transition: all .3s;
 }
