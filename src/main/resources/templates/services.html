@@ -16,20 +16,31 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">Services</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/services</li>
+    </ul>
+</div>
 
 <div class="filtering">
+    <h2>Search our services</h2>
     <form action="">
-
+        <input type="text" placeholder="Search...">
     </form>
 </div>
 
 
 <div class="services-style" th:each="serve : ${services}">
     <a th:href="@{'/servicesdetails/' + ${serve.getId()}}">
-    <span th:text="${serve.getName()}">firstname and lastname</span>
+        <span th:text="${serve.getName()}">firstname and lastname</span>
     </a>
-
 </div>
+
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>

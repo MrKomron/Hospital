@@ -142,7 +142,6 @@ margin-right: 200px;
 }
 
 video{
-    /*float: right;*/
     width: 40%;
     margin-right: 200px;
     border-radius: 9px;
@@ -150,49 +149,45 @@ video{
 }
 
 .big-context h1{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin: 80px;
     font-size: 80px;
     font-family: Lobster;
 }
 
 
-/*SERVICES*/
+/***************************************************SERVICES*/
 
 .services h1{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 80px;
     font-family: Lobster;
     margin-top: 200px;
 }
 
-.services-style{
-    background-color: #0099ef;
-    margin:20px 20px 20px 45px;
-    border-radius: 9px;
-    padding: 80px;
-    display: inline-block;
-    width: 25%;
-    text-align: center;
-}
+/*.services-style{*/
+/*    background-color: #0099ef;*/
+/*    margin:20px 20px 20px 45px;*/
+/*    border-radius: 9px;*/
+/*    padding: 80px;*/
+/*    display: inline-block;*/
+/*    width: 25%;*/
+/*    text-align: center;*/
+/*}*/
 
-.services-style p{
+/*.services-style span{*/
+/*    padding: 200px;*/
+/*}*/
 
-    font-size: 28px;
-}
-
-.services-style a{
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-    text-align: center;
-}
+/*.services-style a{*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*    font-size: 22px;*/
+/*    text-align: center;*/
+/*}*/
 
 .doctors h1{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin: 80px;
     font-size: 80px;
     font-family: Lobster;
@@ -273,6 +268,17 @@ video{
     border-radius: 12px;
     color: white;
     font-size: 18px;
+}
+
+
+.filtering{
+    margin: 50px 300px;
+    text-align: center;
+}
+
+.filtering input{
+    margin-top: 20px;
+    padding: 10px 600px 10px 20px;
 }
 
 /*ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*/
@@ -481,7 +487,7 @@ video{
 
 .about-team div a{
     color: black;
-text-align: center;
+    text-align: center;
 }
 
 .about-team div p{
@@ -491,12 +497,72 @@ text-align: center;
 
 
 
+/*******************CONTACT*********************/
+.contacts form{
+    margin: 50px 0 0 80px;
+    width: 40%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    float: left;
+}
+
+.contacts form h5{
+    background-color: #0099ef;
+    width: 40%;
+    padding: 10px;
+    color: white;
+}
+.contacts form .main-field input{
+    margin: 20px;
+    padding: 10px 25px 10px 15px;
+}
+
+.contacts form select{
+    margin: 20px 25px;
+    width: 220px;
+    padding: 10px 25px 10px 15px;
+}
+
+.contacts .date{
+    margin: 20px;
+    padding: 10px 40px 10px 15px;
+}
+
+.contacts .time{
+    margin: 20px;
+    padding: 10px 55px 10px 65px;
+}
+
+.button-appointment{
+    margin: 30px 0 50px 100px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: #0099ef;
+    color: white;
+}
+
+.contact-information{
+    float: right;
+    margin-right: 100px;
+}
+
+.contact-information i{
+    color: #0099ef;
+}
+
+.map iframe{
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+/**********************************************/
+
 
 
 
 .news h1{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin: 80px;
     font-size: 80px;
     font-family: Lobster;

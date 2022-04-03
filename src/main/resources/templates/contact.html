@@ -28,29 +28,65 @@
 </div>
 
 <h2>Get Touch With Us</h2>
+<div class="contacts">
 <form action="">
-    <label for="firstname"></label>
-    <input type="text" name="firstname" id="firstname" placeholder="Firstname">
-    <label for="lastname"></label>
-    <input type="text" name="firstname" id="lastname" placeholder="Lastname"><br>
-    <label for="email"></label>
-    <input type="email" name="firstname" id="email" placeholder="Email">
-    <label for="tel"></label>
-    <input type="tel" name="firstname" id="tel" placeholder="Phone number"><br>
-    <select>
-        <option value="apple">Tooth</option>
-        <option value="banana">Plastic surgery</option>
-        <option value="orange">Orange</option>
-        <option value="pear">Pear</option>
-    </select>
-    <select>
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-        <option value="orange">Orange</option>
-        <option value="pear">Pear</option>
-    </select>
-</form>
+    <h5>Make an appointment</h5>
+    <div class="main-field">
+        <label for="firstname"></label>
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+        <label for="lastname"></label>
+        <input type="text" name="firstname" id="lastname" placeholder="Lastname"><br>
+        <label for="email"></label>
+        <input type="email" name="firstname" id="email" placeholder="Email">
+        <label for="tel"></label>
+        <input type="tel" name="firstname" id="tel" placeholder="Phone number"><br>
+    </div>
+        <label for="date"></label>
+        <input type="date" name="date" id="date" class="date">
+        <label for="time"></label>
+        <input type="time" name="date" id="time" class="time"><br>
+        <select>
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+            <option value="pear">Pear</option>
+        </select>
 
+    <input type="submit" value="Submit" class="button-appointment">
+</form>
+</div>
+
+<div class="contact-information">
+    <h3>Social</h3>
+    <hr>
+    <a th:href="@{${'https://www.linkedin.com/'}}"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+    <a th:href="@{${'https://www.instagram.com/'}}"><i class="fa-brands fa-instagram fa-2x"></i></i></a>
+    <a th:href="@{${'https://www.facebook.com/'}}"><i class="fa-brands fa-facebook-square fa-2x"></i></a>
+    <h5>Address</h5>
+    <hr>
+    <p><i class="fa-solid fa-location-dot fa-2x"></i>12 Mikrorayon, Khujand, Tajikistan</p>
+    <h3><i class="fa-solid fa-calendar-days fa-1x"></i>Opening hours</h3>
+    <hr>
+    <ul>
+        <li>MonFri: 8:00am6:00pm</li>
+        <li>Sat: 9:00am3:00pm</li>
+        <li>Sun: 10:00am2:00pm</li>
+        <li>MonFri: 8:00am6:00pm</li>
+        <li>Sat: 9:00am3:00pm</li>
+        <li>Sun: 10:00am2:00pm</li>
+    </ul>
+    <h3><i class="fa-solid fa-phone fa-1x"></i>Phones</h3>
+    <hr>
+    <p>+992 92 622 5060</p>
+    <h3><i class="fa-solid fa-envelope fa-1x"></i>Email</h3>
+    <hr>
+    <p>example@gmail.com</p>
+</div>
+
+
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.418403278554!2d69.58004601525369!3d40.28866797938026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b1b3dba464decb%3A0xefd71351f8ad6886!2sMeditsinskiy%20Tsentr%20%22Sinaps%22!5e0!3m2!1sen!2sbe!4v1649004095607!5m2!1sen!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>
