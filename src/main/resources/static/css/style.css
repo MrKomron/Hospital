@@ -21,15 +21,15 @@ body{
     margin: 50px;
 }
 
-.social{
+.hat .social{
 margin-left: 50px;
 }
 
-.fa-brands{
+.hat .fa-brands{
     color: white;
 }
 
-.fa-brands:hover{
+.hat .fa-brands:hover{
     color: #3700ff;
 }
 
@@ -163,7 +163,6 @@ video{
 .services h1{
     display: flex;
     justify-content: center;
-
     font-size: 80px;
     font-family: Lobster;
     margin-top: 200px;
@@ -173,21 +172,22 @@ video{
     background-color: #0099ef;
     margin:20px 20px 20px 45px;
     border-radius: 9px;
-    padding: 20px;
-    width: 20%;
+    padding: 80px;
     display: inline-block;
+    width: 25%;
+    text-align: center;
 }
 
 .services-style p{
-    text-align: center;
+
     font-size: 28px;
 }
 
 .services-style a{
     text-decoration: none;
     color: white;
-    font-size: 12px;
-    float: right;
+    font-size: 22px;
+    text-align: center;
 }
 
 .doctors h1{
@@ -390,14 +390,94 @@ video{
     margin: 15px 25px 0 45px;
     width: 20%;
     display: inline-block;
-    border: 3px solid black;
-    border-radius: 12px 12px 0 0;
 }
+
+
 
 .about-team div img{
     width: 100%;
     border-radius: 12px 12px 0 0;
 }
+
+.overlay{
+    position: absolute;
+    top: 1820px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 390px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 140, 186, 0.38);
+}
+
+.overlay i{
+    color: white;
+    margin-top: 150px;
+    margin-right: 44px;
+}
+
+.team-hover a{
+    text-decoration: none;
+}
+
+.overlay-second{
+    position: absolute;
+    top: 1820px;
+    bottom: 0;
+    left: 379px;
+    right: 0;
+    height: 390px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 140, 186, 0.38);
+}
+
+.overlay-third{
+    position: absolute;
+    top: 1820px;
+    bottom: 0;
+    left: 757px;
+    right: 0;
+    height: 390px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 140, 186, 0.38);
+}
+
+.overlay-fourth{
+    position: absolute;
+    top: 1820px;
+    bottom: 0;
+    left: 1135px;
+    right: 0;
+    height: 390px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 140, 186, 0.38);
+}
+
+.overlay div{
+    text-align: center;
+    display: inline;
+}
+
+.first-doctor:hover .overlay {
+    opacity: 1;
+}
+
+.second-doctor:hover .overlay-second{
+    opacity: 1;
+}
+
+.third-doctor:hover .overlay-third{
+    opacity: 1;
+}
+
+.fourth-doctor:hover .overlay-fourth{
+    opacity: 1;
+}
+
 
 .about-team div a{
     color: black;

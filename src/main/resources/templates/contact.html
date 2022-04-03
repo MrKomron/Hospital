@@ -16,6 +16,40 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">Contact</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/contact</li>
+    </ul>
+</div>
+
+<h2>Get Touch With Us</h2>
+<form action="">
+    <label for="firstname"></label>
+    <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+    <label for="lastname"></label>
+    <input type="text" name="firstname" id="lastname" placeholder="Lastname"><br>
+    <label for="email"></label>
+    <input type="email" name="firstname" id="email" placeholder="Email">
+    <label for="tel"></label>
+    <input type="tel" name="firstname" id="tel" placeholder="Phone number"><br>
+    <select>
+        <option value="apple">Tooth</option>
+        <option value="banana">Plastic surgery</option>
+        <option value="orange">Orange</option>
+        <option value="pear">Pear</option>
+    </select>
+    <select>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+        <option value="pear">Pear</option>
+    </select>
+</form>
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

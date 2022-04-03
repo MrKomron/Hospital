@@ -17,11 +17,19 @@
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
 
-<div class="services-style" th:each="serve : ${services}">
-    <p th:text="${serve.getName()}">firstname and lastname</p><br>
-    <a href="#" >More information</a>
+<div class="filtering">
+    <form action="">
+
+    </form>
 </div>
 
+
+<div class="services-style" th:each="serve : ${services}">
+    <a th:href="@{'/servicesdetails/' + ${serve.getId()}}">
+    <span th:text="${serve.getName()}">firstname and lastname</span>
+    </a>
+
+</div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>

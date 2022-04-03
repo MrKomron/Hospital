@@ -27,26 +27,6 @@
         <div><p th:text="${services.getName()}">0</p></div><br>
         <div class="info">Capacity : </div>
         <div><p th:text="${services.getMoreInformation()}">0</p></div><br>
-<!--        <div class="info">Food provided? : </div>-->
-<!--        <div><p th:text="${venue.isFoodProvided() ? 'yes' : 'no'}">no</p></div><br>-->
-<!--        <div class="info">Indoor? : </div>-->
-<!--        <div><p th:text="${venue.isIndoor() ? 'yes' : 'no'}">no</p></div><br>-->
-<!--        <div class="info">Outdoor? : </div>-->
-<!--        <div><p th:text="${venue.isOutdoor() ? 'yes' : 'no'}">no</p></div><br>-->
-<!--        <div class="info">Free Parking Available? : </div>-->
-<!--        <div><p th:text="${venue.isFreeParkingAvailable() ? 'yes' : 'no'}">no</p></div><br>-->
-<!--        <div class="info">Distance Public Transport in km : </div>-->
-<!--        <div><p th:text="${venue.distanceFromPublicTransportInKm}">0</p></div><br>-->
-<!--        <div class="info">City : </div>-->
-<!--        <div><p th:text="${venue.getCity()}">?/p></div>-->
-<!--        <h2 th:text="|parties in de ${venue.venueName}|">parties</h2>-->
-<!--        <div class="partylist collectionlist">-->
-<!--            <div th:each="party, status: ${parties}">-->
-<!--                <a class="buttonLook mediumButton" th:href="@{'/servicesdetails/' + ${party.id}}">-->
-<!--                    <span th:text="${party.getName()}">Naam party</span>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 </div>
 <div class="row1content" th:unless="${services}">

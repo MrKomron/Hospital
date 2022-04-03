@@ -43,5 +43,8 @@ VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
 INSERT INTO SERVICES(ID, NAME, INFORMATION)
 VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
 
+INSERT INTO SERVICES(ID, NAME, INFORMATION)
+VALUES (nextval('SERVICES_SEQ'), 'Anti-Aging','click');
+
 
 
