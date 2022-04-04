@@ -18,25 +18,29 @@ public class ServicesController {
     @Autowired
     private ServicesRepository servicesRepository;
 
-    @GetMapping({"/services"})
+    @GetMapping({"/services","/services/{extraword}"})
     public String services(Model model){
        Iterable<Services> services = servicesRepository.findAll();
         model.addAttribute("services", services);
-
-
         return "services";
     }
 
     @GetMapping({"/servicesdetails/{id}", "/servicesdetails"})
     public String venueDetails(Model model, @PathVariable(required = false) Integer id) {
-        if (id==null) return "servicesdetails";
+        if (id==null) {
+            model.addAttribute("noserv","You did not choose a service. Please choose it!");
+            return "servicesdetails";
+        }
         Optional<Services> optionalVenue = servicesRepository.findById(id);
         Optional<Services> optionalPrev = servicesRepository.findFirstByIdLessThanOrderByIdDesc(id);
         Optional<Services> optionalNext = servicesRepository.findFirstByIdGreaterThanOrderById(id);
         if (optionalVenue.isPresent()) {
             Services s = optionalVenue.get();
             model.addAttribute("services", s);
-//            model.addAttribute("parties", partyRepository.findByVenue(v));
+        }else{
+            int max=servicesRepository.findFirstByOrderByIdDesc().get().getId();
+            int min=servicesRepository.findFirstByOrderByIdAsc().get().getId();
+            model.addAttribute("message","index is between"+min+" and "+max);
         }
         if (optionalPrev.isPresent()) {
             model.addAttribute("prev", optionalPrev.get().getId());

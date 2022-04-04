@@ -14,9 +14,9 @@
         <span class="first-line"><i class="fa-solid fa-location-dot fa-xl" style="color: white"></i><span class="text-hat">12 Mikrorayon, Khujand, Tajikistan</span></span>
         <span class="first-line"><i class="fa-solid fa-envelope fa-xl" style="color: white"></i><span class="text-hat">example@gmail.com</span></span>
         <span class="first-line non"><i class="fa-solid fa-phone fa-xl" style="color: white"></i><span class="text-hat">+992 92 622 5060</span></span>
-        <a class="social " th:href="@{${'https://www.instagram.com/'}}" title="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
-        <a class="social " th:href="@{${'https://www.linkedin.com/'}}" title="linkedin"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-        <a class="social " th:href="@{${'https://www.facebook.com/'}}" title="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a class="social" th:href="@{${'https://www.instagram.com/'}}" title="instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a class="social" th:href="@{${'https://www.linkedin.com/'}}" title="linkedin"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a class="social" th:href="@{${'https://www.facebook.com/'}}" title="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
     </div>
 </div>
 
@@ -54,12 +54,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consectetur expedita ipsum libero mollitia numquam officia optio possimus similique, sit velit. Amet facere provident voluptates. Earum perferendis quo rem.</p>
                     <div class="contact">
                         <span><i class="fas fa-phone"></i>123456789</span>
-                        <span><i class="fas fa-envelope"></i>123456789</span>
+                        <span><i class="fas fa-envelope"></i>example@gmail.com</span>
                     </div>
                     <div class="socials">
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a th:href="@{${'https://www.facebook.com/'}}"><i class="fab fa-facebook"></i></a>
+                        <a th:href="@{${'https://www.linkedin.com/'}}"><i class="fab fa-linkedin"></i></a>
+                        <a th:href="@{${'https://www.instagram.com/'}}"><i class="fab fa-instagram"></i></a>
                     </div>
                 
             </div>
@@ -67,8 +67,8 @@
                 <h2>Quick Links</h2>
                 <br>
                 <ul>
-                    <a href=""><li>About</li></a>
-                    <a href=""><li>Services</li></a>
+                    <a th:href="@{/about}"><li>About</li></a>
+                    <a th:href="@{/services}"><li>Services</li></a>
                     <a href=""><li>Pages</li></a>
                     <a href=""><li>News</li></a>
                     <a href=""><li>Contact</li></a>
@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; Husnoro.com | All rights reserved
+            &copy Husnoro.com | All rights reserved
         </div>
     </div>
 </div>
