@@ -153,7 +153,7 @@
         <input type="submit" value="View all news">
     </form>
     <div class="doctors-style" th:each="doc : ${news}">
-    <p th:text="${doc.getFirstname()}">firstname and lastname</p><br>
+    <p th:text="${doc.getName()}">firstname and lastname</p><br>
     <!--        <a href="#" >More information</a>-->
 </div>
 </div>

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Husnoro | Services Edit</title>
+    <title>Husnoro | Services new</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
     <script th:src="@{https://kit.fontawesome.com/4baffb7ed7.js}" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +19,7 @@
 <div class="row1">
     <div class="row1content" th:object="${services}">
         <div th:if="${services}" class="editButtonDiv">
-            <a class="buttonLook smallButton" th:href="@{'/servicesdetails/' + ${services.getId()}}">back</a>
+            <a class="buttonLook smallButton" th:href="@{'/services/'}">back</a>
         </div>
         <div>
             <h2 th:if="${service}" th:text="|party: ${services.getName()}|">party: onbekend</h2>
@@ -27,9 +27,9 @@
         </div>
         <div class="error" th:if="${#fields.hasErrors('*')}">ERROR - data is not saved</div>
         <div th:if="${service}">
-            <form th:action="@{|/admin/serviceedit/${services.getId()}|}" method="post">
+            <form th:action="@{|/admin/servicesnew|}" method="post">
                 <div class="oneinput saveButtonDiv">
-                    <input type="submit" value="save" class="smallButton buttonLook">
+                    <input type="submit" value="create" class="smallButton buttonLook">
                 </div>
                 <div class="oneinput">
                     <label for="name" class="info">Name: </label>
@@ -39,10 +39,16 @@
                     <label for="extrainfo" class="info">Extra info: </label>
                     <textarea id="extrainfo" class="editfield" th:field="*{procInformation}"></textarea>
                 </div>
+                <div class="oneinput">
+                    <label for="extrainfo2" class="info">Extra info: </label>
+                    <textarea id="extrainfo2" class="editfield" th:field="*{canInformation}"></textarea>
+                </div>
             </form>
         </div>
     </div>
 </div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
+
+
 </body>
 </html>

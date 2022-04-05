@@ -1,6 +1,7 @@
 package be.thomasmore.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Services {
@@ -8,16 +9,13 @@ public class Services {
     @SequenceGenerator(name = "services_generator", sequenceName = "services_seq", allocationSize = 1)
     @Id
     private Integer id;
+    @NotBlank
     private String name;
-    private String Information;
+    @Column(length = 10000)
+    private String procInformation;
+    @Column(length = 10000)
+    private String canInformation;
 
-
-    public Services(Integer id, String name, String moreInformation) {
-        this.id = id;
-        this.name = name;
-        this.Information = moreInformation;
-
-    }
 
     public Services() {
     }
@@ -38,12 +36,20 @@ public class Services {
         this.name = name;
     }
 
-    public String getMoreInformation() {
-        return Information;
+    public String getProcInformation() {
+        return procInformation;
     }
 
-    public void setMoreInformation(String moreInformation) {
-        this.Information = moreInformation;
+    public void setProcInformation(String procInformation) {
+        this.procInformation = procInformation;
     }
 
+
+    public String getCanInformation() {
+        return canInformation;
+    }
+
+    public void setCanInformation(String canInformation) {
+        this.canInformation = canInformation;
+    }
 }

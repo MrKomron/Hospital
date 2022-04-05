@@ -12,29 +12,40 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
-<div th:if="${services}">
-    <div th:if="${prev!=null}">
-        <a class="prev-serv-detail" th:href="@{'/servicesdetails/' + ${prev}}">previous</a>
+<div class="serv-details"  th:if="${services}">
+    <div class="serv-details-buttons">
+        <div th:if="${prev!=null}">
+            <a class="prev-serv-detail" th:href="@{'/servicesdetails/' + ${prev}}"><i class="fa-solid fa-angles-left"></i>prev</a>
+        </div>
+        <div>
+            <a class="edit-serv-detail" th:href="@{'/admin/serviceedit/' + ${services.getId()}}"><i class="fa-solid fa-pen-ruler"></i>edit</a>
+        </div>
+        <div th:if="${next!=null}">
+            <a class="next-serv-detail" th:href="@{'/servicesdetails/' + ${next}}">next<i class="fa-solid fa-angles-right"></i></a>
+        </div>
     </div>
-    <div th:if="${next!=null}">
-        <a class="next-serv-detail" th:href="@{'/servicesdetails/' + ${next}}">next</a>
-    </div>
+
+    <div class="main-serv-content">
+        <h2 th:text="'What is a '+${services.getName()+'?'}">Naam service</h2>
     <div>
-        <h2 th:text="${services.getName()}">Naam service</h2>
+        <div class="serv-name">Name :</div>
+        <b><div th:text="${services.getName()}">no data</div></b>
+        <div><p th:text="${services.getProcInformation()}">0</p></div>
+        <div th:if="${services.getCanInformation()}">
+            <div>
+                <h5 th:text="'Who are candidates for '+${services.getName()+'?'}"></h5>
+                <p th:text="${services.getCanInformation()}">0</p>
+            </div>
+        </div>
     </div>
-    <div>
-        <div class="info">Name : </div>
-        <div><p th:text="${services.getName()}">0</p></div><br>
-        <div class="info">Capacity : </div>
-        <div><p th:text="${services.getMoreInformation()}">0</p></div><br>
     </div>
 </div>
-<div class="row1content" th:if="${id==null}">
-    <p th:text="${noserv}">no services was chosen</p>
-</div>
-<div th:if="${id!=null}">
-    <p th:text="${message}">no services was chosen</p>
-</div>
+    <div class="null" th:if="${id==null}">
+        <p th:text="${noserv}">no services was chosen</p>
+    </div>
+    <div class="big-index" th:if="${id!=null}">
+        <p th:text="${message}">service index is not correct</p>
+    </div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>
