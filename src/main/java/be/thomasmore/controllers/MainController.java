@@ -1,13 +1,11 @@
 package be.thomasmore.controllers;
 
-import be.thomasmore.model.Doctors;
+import be.thomasmore.model.Team;
 import be.thomasmore.model.News;
 import be.thomasmore.model.Services;
 import be.thomasmore.repositories.TeamRepository;
 import be.thomasmore.repositories.NewsRepository;
 import be.thomasmore.repositories.ServicesRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +34,7 @@ public class MainController {
         model.addAttribute("services",allServices);
 
 
-        Iterable<Doctors> allDoctors=doctorsRepository.findAll();
+        Iterable<Team> allDoctors=doctorsRepository.findAll();
         model.addAttribute("doctors",allDoctors);
 
         Iterable<News> allNews=newsRepository.findAll();

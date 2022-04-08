@@ -1,13 +1,13 @@
 package be.thomasmore.repositories;
 
-import be.thomasmore.model.Doctors;
+import be.thomasmore.model.Team;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface TeamRepository extends CrudRepository<Doctors,Integer> {
-    Optional<Doctors> findFirstByIdLessThanOrderByIdDesc(int id);
-    Optional<Doctors> findFirstByIdGreaterThanOrderById(int id);
-    Optional<Doctors> findFirstByOrderByIdDesc();
-    Optional<Doctors> findFirstByOrderByIdAsc();
+public interface TeamRepository extends CrudRepository<Team,Integer> {
+    Optional<Team> findFirstByIdLessThanOrderByIdDesc(int id);
+    Optional<Team> findFirstByIdGreaterThanOrderById(int id);
+    Optional<Team> findFirstByOrderByIdDesc();
+    Optional<Team> findFirstByOrderByIdAsc();
 }

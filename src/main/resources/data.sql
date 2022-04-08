@@ -135,23 +135,23 @@ VALUES (nextval('FAQ_SEQ'),'What about caregivers and assistance at home?','The 
 INSERT INTO FAQ(ID,QUESTION,ANSWER)
 VALUES (nextval('FAQ_SEQ'),'What are assistive devices, and how do I access them?','If you require your own assistive device (such as a wheelchair) upon discharge, your occupational therapist will make a recommendation and request a quotation from independent equipment suppliers, based on your clinical condition and home environment. The equipment needs will be discussed with you and your family. It is your responsibility to obtain authorisation from your medical aid and/or arrange for payment with independent equipment suppliers.');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (1,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (2,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (3,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (4,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (5,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (6,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
 VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
@@ -161,6 +161,25 @@ INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
 VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
 
 
+INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
+VALUES (1,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+
+INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
+VALUES (2,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+
+INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
+VALUES (3,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+
+
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (1, 1);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (2, 1);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (2, 3);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (3, 3);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (4, 2);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (5, 2);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (6, 1);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (3, 2);
+INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (1, 3);
 
 
 INSERT INTO USER

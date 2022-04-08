@@ -1,26 +1,30 @@
 package be.thomasmore.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
-public class Doctors {
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "doctors_generator")
-    @SequenceGenerator(name = "doctors_generator", sequenceName = "doctors_seq", allocationSize = 1)
+public class Patient {
     @Id
     private Integer id;
     private String firstname;
     private String lastname;
-    private int age;
+    private Integer age;
     private String email;
-    private int phoneNumber;
+    private Integer phoneNumber;
     @Column(length = 1000)
     private String bio;
-    @Column(nullable = true, length = 64)
-    private String photos;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
+    private Date lastVisit;
+    private Boolean isNewClient;
+    @ManyToMany(mappedBy = "patients", fetch = FetchType.LAZY)
+    private Collection<Team> teams;
 
-
-    public Doctors() {
+    public Patient() {
     }
 
     public Integer getId() {
@@ -79,13 +83,29 @@ public class Doctors {
         this.bio = bio;
     }
 
-    public String getPhotos() {
-        return photos;
+    public Date getLastVisit() {
+        return lastVisit;
     }
 
-    public void setPhotos(String photos) {
-        this.photos = photos;
+    public void setLastVisit(Date lastVisit) {
+        this.lastVisit = lastVisit;
     }
 
+    public Boolean getNewClient() {
+        return isNewClient;
+    }
 
+    public void setNewClient(Boolean newClient) {
+        isNewClient = newClient;
+    }
+
+    public Collection<Team> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(Collection<Team> teams) {
+        this.teams = teams;
+    }
 }
+
+
