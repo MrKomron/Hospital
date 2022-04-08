@@ -3,9 +3,11 @@ package be.thomasmore.controllers;
 import be.thomasmore.model.Doctors;
 import be.thomasmore.model.News;
 import be.thomasmore.model.Services;
-import be.thomasmore.repositories.DoctorsRepository;
+import be.thomasmore.repositories.TeamRepository;
 import be.thomasmore.repositories.NewsRepository;
 import be.thomasmore.repositories.ServicesRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,15 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class MainController {
     @Autowired
     private ServicesRepository servicesRepository;
     @Autowired
-    private DoctorsRepository doctorsRepository;
+    private TeamRepository doctorsRepository;
     @Autowired
     private NewsRepository newsRepository;
 
@@ -42,8 +42,9 @@ public class MainController {
         Iterable<News> allNews=newsRepository.findAll();
         model.addAttribute("news",allNews);
 
-        return "home";
+      return "home";
     }
+
 
 
 }

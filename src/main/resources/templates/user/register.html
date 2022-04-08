@@ -1,11 +1,12 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Husnoro | Services Edit</title>
+    <title>Husnoro | Newsdetails</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
     <script th:src="@{https://kit.fontawesome.com/4baffb7ed7.js}" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,29 +15,40 @@
 
 </head>
 <body>
-<div th:replace="fragment/samecode :: top">Hier komt de header</div>
-<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<div class="register-page">
+    <h2>Register</h2>
+    <form th:action="@{/user/register}" method="post" class="register-form">
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="userName">
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="city">City: </label>
+            <input type="text" id="city" name="city">
+        </div>
+        <div>
+            <label for="old1">Yes: </label>
+            <input type="radio" id="old1" name="old">
 
-<div class="row1">
-    <div class="row1content" th:object="${new}">
-        <div th:if="${new}" class="editButtonDiv">
-            <a class="buttonLook smallButton" th:href="@{'/news/'}">back</a>
         </div>
-        <div th:if="${news}">
-            <form th:action="@{|/admin/newsnew|}" method="post">
-                <div class="oneinput saveButtonDiv">
-                    <input type="submit" value="create" class="smallButton buttonLook">
-                </div>
-                <label for="name">Name : </label>
-                <input type="text" id="name" name="newsName" th:field="*{name}"><br>
-                <label for="text">Text : </label>
-                <textarea id="text" name="text" th:field="*{text}"></textarea>
-            </form>
+        <div class="register-btn">
+            <input type="submit" value="Register">
         </div>
-    </div>
+        <div class="register-btn">
+            <a href="/contact">cancel</a>
+        </div>
+    </form>
 </div>
 
-<div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
+
 
 </body>
 </html>

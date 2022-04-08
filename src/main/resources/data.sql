@@ -90,3 +90,84 @@ VALUES (nextval('SERVICES_SEQ'), 'Hair Replacement Surgery',
         'Generally, people of normal weight who have localized areas of protruding fat achieve the most desired results, however, persons who are slightly overweight can also benefit from liposuction. The best candidates for liposuction include the following: Normal-weight (or slightly-overweight) people, People with firm, elastic skin, People who have pockets of excess fat in certain areas, Physically healthy and psychologically stable people, People with realistic expectations. Age is not a major factor, although older persons with diminished skin elasticity may not have the same results as persons with tighter skin.');
 
 
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'What happens once I am admitted?','The interdisciplinary team does a full assessment of every patient and establishes a comprehensive list of medical issues and challenges. The rehabilitation team then decides on the correct intensity of intervention for the best possible outcome.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Do all patients undergo the same rehabilitation programme?','No, the focus of your intervention is tailored to the challenges or medical issues that arose in the initial and subsequent assessments. It’s important to remember that each patient is unique, both in their diagnosis as well as their abilities. No rehabilitation programme is the same. Our staff are committed to working with you and your family to ensure the best possible outcome, but you are the most important member of the team and your commitment to your rehabilitation is integral to our success. Your team will expect you to practise the techniques you are taught during your daily therapy sessions so that they can offer you support and guidance, and you can be confident and independent in these activities before you’re discharged.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Will medical aid pay for the treatment?','Most medical aids pay for acute rehabilitation to facilitate return to function and reduce complications. Life Rehabilitation offers a global fee tariff that includes hospital, doctor and therapist costs. This helps preserve patients'' medical savings.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'What clothing should I bring?','Since this is a rehabilitation centre and not a hospital, we recommend that you wear your own clothing and not pyjamas. Patients with families close by are encouraged to have their laundry sent home with them, but if necessary a washing machine and dryer is available for patient use. Please mark all your clothing clearly with a permanent marker.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Am I allowed to keep my valuables with me?','Although we do our utmost to ensure the safety of your personal possessions, valuables, money and cell phones, these items are kept on our premises completely at your own risk. We can not accept responsibility for any loss or damage to your personal property. Please enquire with the nursing unit manager regarding the safe lock-up of any valuables.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Are my family and friends allowed to visit me?','Yes, we encourage family and friends to visit during the rehabilitation process. Your therapist will advise when your family can attend therapy sessions, as it can be distracting during treatment time. Remember that rehabilitation can be exhausting and rest is of paramount importance: it’s important to strictly adhere to the rules regarding visiting hours and the number of visitors.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Will my family be allowed to bring me food?','Most rehabilitation patients require an adapted diet – at least initially. Please discuss with the dietitian before bringing in any additional food, and make the doctor, dietitian, nursing staff and ward hostess aware if you have additional specific medical or non-medical needs.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'How often do I receive therapy?','Every patient is assessed for their particular therapeutic requirements: your therapy “mix” and focus may therefore differ from your fellow patients. The intensity of therapy delivered is also dependent on your diagnostic category.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Will my information be shared with other healthcare professionals in the ward?','If you would prefer to not have this information displayed, kindly inform the unit manager who will make alternative arrangements. Regular team meetings are also scheduled where your progress is shared with the rest of the interdisciplinary team.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Am I allowed to take photographs or videos?','Yes, if you do not include any other patient in the photographs or in the background of the video without their permission. This is to respect and protect other patients’ confidentiality. We will obtain written permission from you before taking any photographs or video of you, and these will only be used to track your progress and for clinical teaching.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Who makes up my rehabilitation team?','A Rehabilitation Practice Manager (RPM) or Clinic Manager (CM) manages our rehabilitation facilities. The RPM/CM is ultimately responsible for the unit’s service quality as well as the strategic, operational and management aspects of running the service. Please feel free to approach them with any queries or concerns that your therapy team haven’t addressed.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'Am I allowed to go home some weekends?','It is important that patients and families are able to cope outside the structured ward environment. We require patients to return home on a leave of absence at least once prior to discharge.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'How long will I stay at the rehabilitation facility?','That depends on your progress. Your progress will be shared with your referring doctors and/or therapists in the form of regular reports. Your medical aid provides authorisation for your inpatient rehabilitation, a week at a time, pending reports on your progress in the rehabilitation programme.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'What about caregivers and assistance at home?','The severity of the disability will contribute to determining what level of independence you’ll achieve by discharge. In some instances, a carer will be required in the home environment, and your social worker will discuss this with you.');
+
+INSERT INTO FAQ(ID,QUESTION,ANSWER)
+VALUES (nextval('FAQ_SEQ'),'What are assistive devices, and how do I access them?','If you require your own assistive device (such as a wheelchair) upon discharge, your occupational therapist will make a recommendation and request a quotation from independent equipment suppliers, based on your clinical condition and home environment. The equipment needs will be discussed with you and your family. It is your responsibility to obtain authorisation from your medical aid and/or arrange for payment with independent equipment suppliers.');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DOCTORS(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('DOCTORS_SEQ'),'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+
+INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
+VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
+INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
+VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
+INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
+VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
+
+
+
+
+INSERT INTO USER
+(ID, username, password, role)
+VALUES
+    (nextval('USER_SEQ'), 'admin', '$2a$10$Vl/0CHuhqMalmJvKHbzbDOH5VfvSiiLg2PfzeO2RJX7qXqUvRAbHu', 'ROLE_ADMIN');
+INSERT INTO USER
+(ID, username, password, role)
+VALUES
+    (nextval('USER_SEQ'), 'Jansen', '$2a$10$3XY.2x3nSJ6D8yW6Nrhb5ewVOB3mv7Op0nmW59RAozRp6FyQlwbrG', 'ROLE_USER');

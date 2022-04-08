@@ -15,7 +15,57 @@
 </head>
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
-    <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">FAQ</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/faq</li>
+    </ul>
+</div>
+
+<div class="filtering">
+    <h2>Search our services</h2>
+    <div th:if="${filter}">
+        <form>
+            <div>
+                <label for="keyword"></label>
+                <input type="text" id="keyword" name="question" th:value="${question}" class="search">
+                <input type="submit" value="search" class="btn-search">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="faq-style" th:each="quest : ${faqs}">
+    <button class="accordion"><span class="faq-quest" th:text="${quest.getQuestion()}">question and answer</span><br></button>
+    <div class="panel">
+        <span class="faq-answer" th:text="${quest.getAnswer()}">question and answer</span>
+    </div>
+
+
+</div>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("working");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

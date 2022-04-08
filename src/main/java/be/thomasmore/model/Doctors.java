@@ -1,6 +1,7 @@
 package be.thomasmore.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Doctors {
@@ -15,21 +16,9 @@ public class Doctors {
     private int phoneNumber;
     @Column(length = 1000)
     private String bio;
-    private String department;
     @Column(nullable = true, length = 64)
     private String photos;
 
-    public Doctors(Integer id, String firstname, String lastname, int age, String email, int phoneNumber, String bio, String department, String photos) {
-        this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.age = age;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.bio = bio;
-        this.department = department;
-        this.photos = photos;
-    }
 
     public Doctors() {
     }
@@ -90,14 +79,6 @@ public class Doctors {
         this.bio = bio;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     public String getPhotos() {
         return photos;
     }
@@ -105,4 +86,6 @@ public class Doctors {
     public void setPhotos(String photos) {
         this.photos = photos;
     }
+
+
 }

@@ -28,7 +28,7 @@
 
 <div class="filtering">
     <h2>Search our services</h2>
-    <div th:if="${showFilter}">
+    <div th:if="${filter}">
         <form>
             <div>
                 <label for="keyword"></label>
@@ -42,7 +42,7 @@
 
 <div class="services-style" th:each="serve : ${services}">
     <a th:href="@{'/servicesdetails/' + ${serve.getId()}}">
-        <span th:text="${serve.getName()}">firstname and lastname</span>
+        <span th:text="${serve.getName()}">Name</span>
     </a>
 </div>
 

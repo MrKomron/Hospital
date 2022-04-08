@@ -1,5 +1,6 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Husnoro | Samecode</title>
@@ -23,12 +24,12 @@
 <div class="margin-break" th:fragment="navbar">
     <ul class="navigation">
             <li><a class="logo-menu" th:href="@{/home}"><h1>HUSNORO</h1></a></li>
-            <li><a class="menuButton" th:href="@{/home}">Home</a></li>
-            <li><a class="menuButton" th:href="@{/about}">About</a></li>
-            <li><a class="menuButton" th:href="@{/services}">Services</a></li>
+            <li><a class="btn-navbar" th:href="@{/home}">Home</a></li>
+            <li><a class="btn-navbar" th:href="@{/about}">About</a></li>
+            <li><a class="btn-navbar" th:href="@{/services}">Services</a></li>
             <li>
                 <div class="dropdown">
-                <a class="menuButton dropbtn" th:href="@{/pages}">Pages</a>
+                <a class="btn-navbar dropbtn">Pages</a>
                     <div class="dropdown-content">
                         <a th:href="@{/gallery}">Gallery</a>
                         <a th:href="@{/team}">Team</a>
@@ -38,10 +39,12 @@
                     </div>
                 </div>
             </li>
-            <li><a class="menuButton" th:href="@{/news}">News</a></li>
-            <li><a class="menuButton distance" th:href="@{/contact}">Contact</a></li>
-            <li><a class="appointment" th:href="@{/appointment}">Appointment</a></li>
-            <li><a class="login-menu" th:href="@{/login}"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a></li>
+            <li><a class="btn-navbar" th:href="@{/news}">News</a></li>
+            <li><a class="btn-navbar distance" th:href="@{/contact}">Contact</a></li>
+            <li  sec:authorize="isAuthenticated()"><a class="appointment" th:href="@{/appointment}">Appointment</a></li>
+            <li class="login-button" th:replace="fragment/user :: loginmenu"></li>
+            <li th:replace="fragment/user :: logoutmenu"></li>
+
     </ul>
 </div>
 

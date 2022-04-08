@@ -28,7 +28,7 @@ public class ServicesController {
         model.addAttribute("services", services);
         model.addAttribute("service", service);
         model.addAttribute("nrServices", ((Collection<?>) services).size());
-        model.addAttribute("showFilter", true);
+        model.addAttribute("filter", true);
         return "services";
     }
 

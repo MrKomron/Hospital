@@ -1,0 +1,17 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<body>
+<div sec:authorize="!isAuthenticated()" th:fragment="loginmenu">
+       <li><a class="login-btn" href="/user/login"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a></li>
+</div>
+
+<div sec:authorize="isAuthenticated()" th:fragment="logoutmenu">
+        <li><a class="login-btn" href="/user/logout"><i class="fa-solid fa-circle-user fa-xl"></i></a></li>
+</div>
+</body>
+</html>

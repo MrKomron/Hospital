@@ -1,8 +1,9 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <title>Husnoro | About</title>
+    <title>Husnoro | Services details</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
     <script th:src="@{https://kit.fontawesome.com/4baffb7ed7.js}" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,24 +12,7 @@
 </head>
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
-<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
-<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
-
-<h1 class="headline-about">Doctors</h1>
-
-<div class="bread-crumb-line">
-    <ul class="line">
-        <li><a th:href="@{home}">home</a></li>
-        <li>/pages/team</li>
-    </ul>
-</div>
-
-<div th:each="serve : ${doclist}">
-    <a th:href="@{'/servicesdetails/' + ${serve.getId()}}">
-        <span th:text="${serve.getFirstname()}">firstname and lastname</span>
-    </a>
-</div>
-
+<div th:replace="fragment/samecode :: navbar">Hier komt de header</div><div class="row1">
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

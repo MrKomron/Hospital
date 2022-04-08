@@ -15,9 +15,28 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
-<div th:each="news : ${newsall}">
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">News</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/news</li>
+    </ul>
+</div>
+<div id="wizard">
+    <div class="news-style-one" th:each="news : ${newsall}">
+        <div class="step active">
+            <span class="timing" th:text="${news.getDate()}">Date</span>
+        </div>
+    </div>
+</div>
+
+<div class="news-style" th:each="news : ${newsall}">
     <a th:href="@{'/newsdetails/' + ${news.getId()}}">
-        <span th:text="${news.getName()}">firstname and lastname</span>
+        <span th:text="${news.getName()}">Name</span><br>
+
     </a>
 </div>
 
