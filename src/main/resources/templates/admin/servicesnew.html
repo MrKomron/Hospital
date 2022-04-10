@@ -16,39 +16,31 @@
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
-<div class="row1">
-    <div class="row1content" th:object="${services}">
-        <div th:if="${services}" class="editButtonDiv">
-            <a class="buttonLook smallButton" th:href="@{'/services/'}">back</a>
-        </div>
-        <div>
-            <h2 th:if="${service}" th:text="|party: ${services.getName()}|">party: onbekend</h2>
-            <p th:unless="${service}">party: onbekend</p>
+<div th:object="${services}">
+        <div th:if="${services}">
+            <a th:href="@{'/services/'}">back</a>
         </div>
         <div class="error" th:if="${#fields.hasErrors('*')}">ERROR - data is not saved</div>
         <div th:if="${service}">
             <form th:action="@{|/admin/servicesnew|}" method="post">
-                <div class="oneinput saveButtonDiv">
-                    <input type="submit" value="create" class="smallButton buttonLook">
+                <div>
+                    <input type="submit" value="create">
                 </div>
-                <div class="oneinput">
-                    <label for="name" class="info">Name: </label>
-                    <input type="text" id="name" class="editfield" th:field="*{name}"  th:errorclass="fieldError">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" th:field="*{name}"  th:errorclass="fieldError">
                 </div>
-                <div class="oneinput">
-                    <label for="extrainfo" class="info">Extra info: </label>
-                    <textarea id="extrainfo" class="editfield" th:field="*{procInformation}"></textarea>
+                <div>
+                    <label for="procInformation">Extra info: </label>
+                    <textarea id="procInformation" th:field="*{procInformation}"></textarea>
                 </div>
-                <div class="oneinput">
-                    <label for="extrainfo2" class="info">Extra info: </label>
-                    <textarea id="extrainfo2" class="editfield" th:field="*{canInformation}"></textarea>
+                <div>
+                    <label for="canInformation">Extra info: </label>
+                    <textarea id="canInformation" th:field="*{canInformation}"></textarea>
                 </div>
             </form>
         </div>
     </div>
-</div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
-
-
 </body>
 </html>

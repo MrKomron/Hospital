@@ -19,7 +19,7 @@ public class MainController {
     @Autowired
     private ServicesRepository servicesRepository;
     @Autowired
-    private TeamRepository doctorsRepository;
+    private TeamRepository teamRepository;
     @Autowired
     private NewsRepository newsRepository;
 
@@ -34,14 +34,21 @@ public class MainController {
         model.addAttribute("services",allServices);
 
 
-        Iterable<Team> allDoctors=doctorsRepository.findAll();
-        model.addAttribute("doctors",allDoctors);
+        Iterable<Team> allDoctors=teamRepository.findAll();
+        model.addAttribute("teams",allDoctors);
 
         Iterable<News> allNews=newsRepository.findAll();
         model.addAttribute("news",allNews);
 
       return "home";
     }
+
+    @GetMapping({"/about"})
+    public String about(Model model){
+
+        return "about";
+    }
+
 
 
 

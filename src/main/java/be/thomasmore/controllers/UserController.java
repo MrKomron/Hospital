@@ -35,13 +35,13 @@ public class UserController {
     private AuthenticationManager authenticationManager;
 
     @GetMapping("/login")
-    public String login(Principal principal, Model model) {
+    public String login(Principal principal) {
         if (principal != null) return "redirect:/news";
         return "user/login";
     }
 
     @GetMapping("/logout")
-    public String logout(Principal principal, Model model) {
+    public String logout(Principal principal) {
         if (principal == null) return "redirect:/news";
         return "user/logout";
     }
@@ -68,8 +68,6 @@ public class UserController {
         String encodedPassword = encoder.encode(password.trim());
         User user = new User(userName, encodedPassword, "ROLE_USER");
         userRepository.save(user);
-//        Animal animal = new Animal(name.trim(), city.trim(), bio.trim(), user);
-//        animalRepository.save(animal);
         autologin(userName, password.trim());
         return "redirect:/home";
     }

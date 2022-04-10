@@ -25,22 +25,25 @@
         <li>/news</li>
     </ul>
 </div>
-<div id="wizard">
-    <div class="news-style-one" th:each="news : ${newsall}">
-        <div class="step active">
-            <span class="timing" th:text="${news.getDate()}">Date</span>
-        </div>
+<div class="filtering">
+    <h2>Search our news</h2>
+    <div th:if="${filter}">
+        <form>
+            <div>
+                <label for="keyword"></label>
+                <input type="text" id="keyword" name="nameandtext" th:value="${keyword}" class="search" placeholder="Search with word">
+                <input type="submit" value="search" class="btn-search">
+            </div>
+        </form>
     </div>
 </div>
 
-<div class="news-style" th:each="news : ${newsall}">
-    <a th:href="@{'/newsdetails/' + ${news.getId()}}">
-        <span th:text="${news.getName()}">Name</span><br>
-
+<div class="news-style" th:each="t : ${news}">
+    <a th:href="@{'/newsdetails/' + ${t.getId()}}">
+        <span th:text="${t.getName()}">Name</span><br>
     </a>
+    <span class="news-date" th:text="'Published in '+${t.getDate()}">Date</span>
 </div>
-
-
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

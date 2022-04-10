@@ -3,9 +3,10 @@ package be.thomasmore.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "FAQ")
 public class Faq {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "faq_generator")
-    @SequenceGenerator(name = "faq_generator", sequenceName = "faq_seq", allocationSize = 1)
+    @SequenceGenerator(name = "faq_generator", sequenceName = "faq_seq",  initialValue=1, allocationSize = 1)
     @Id
     private Integer id;
     @Column(length = 1000)

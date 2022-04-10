@@ -19,7 +19,7 @@
             <a class="prev-serv-detail" th:href="@{'/servicesdetails/' + ${prev}}"><i class="fa-solid fa-angles-left"></i>prev</a>
         </div>
         <div th:if="${services}" sec:authorize="hasAuthority('ROLE_ADMIN')">
-            <div sec:authorize="hasRole('ADMIN')">only visible to admin</div>
+            <div sec:authorize="hasRole('ADMIN')"></div>
             <a class="edit-serv-detail" th:href="@{'/admin/serviceedit/' + ${services.getId()}}"><i class="fa-solid fa-pen-ruler"></i>edit</a>
         </div>
         <div th:if="${next!=null}">

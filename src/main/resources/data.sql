@@ -1,8 +1,8 @@
 INSERT INTO NEWS (ID, NAME, TEXT, DATE)
 VALUES (nextval('NEWS_SEQ'), 'How sleep and mental health were affected in Sweden during the COVID-19 pandemic',
-        'The outbreak of SARS-CoV-2 in late 2019 is one of the most life-changing catastrophes in modern history. As a result of the non-pharmaceutical measures placed by the nations to curb the coronavirus disease 2019 (COVID-19) pandemic, many people experienced drastic changes in work, communication, and even leisure pursuits.
-        Although Sweden, unlike most nations, was not subjected to a tight lockdown during the pandemic, additional measures such as border closures, travel restrictions, and working from home were implemented that helped stop the spread of SARS-CoV-2.
-        However, these preventive measures caused some negative effects, including increased loneliness, worry about loss of income, and job insecurity. Data from previous studies indicate that the COVID-19 pandemic has led to anxiety, stress, depression, and changes in sleep patterns of populations in many regions around the globe.',
+        'The outbreak of SARS-CoV-2 in late 2019 is one of the most life-changing catastrophes in modern history. As a result of the non-pharmaceutical measures placed by the nations to curb the coronavirus disease 2019 (COVID-19) pandemic, many people experienced drastic changes in work, communication, and even leisure pursuits.' ||
+        'Although Sweden, unlike most nations, was not subjected to a tight lockdown during the pandemic, additional measures such as border closures, travel restrictions, and working from home were implemented that helped stop the spread of SARS-CoV-2. ' ||
+        'However, these preventive measures caused some negative effects, including increased loneliness, worry about loss of income, and job insecurity. Data from previous studies indicate that the COVID-19 pandemic has led to anxiety, stress, depression, and changes in sleep patterns of populations in many regions around the globe.',
         '1997-07-07');
 
 INSERT INTO NEWS (ID, NAME, TEXT, DATE)
@@ -136,39 +136,35 @@ INSERT INTO FAQ(ID,QUESTION,ANSWER)
 VALUES (nextval('FAQ_SEQ'),'What are assistive devices, and how do I access them?','If you require your own assistive device (such as a wheelchair) upon discharge, your occupational therapist will make a recommendation and request a quotation from independent equipment suppliers, based on your clinical condition and home environment. The equipment needs will be discussed with you and your family. It is your responsibility to obtain authorisation from your medical aid and/or arrange for payment with independent equipment suppliers.');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (1,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Johnson','Smith',32,'example1@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (2,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Williams','Brown',32,'example2@gamil.com','987654321','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (3,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Jones','Garcia',32,'example3@gamil.com','147852369','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (4,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Miller','Davis',32,'example4@gamil.com','963258741','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (5,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Rodriguez','Martinez',32,'example5@gamil.com','326159487','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
-VALUES (6,'Jeremy','Sebastian',32,'example@gamil.com','123456789','loremloremloremloremloremloremloremloremloremloremlorem','');
+VALUES (nextval('TEAM_SEQ'),'Hernandez','Lopez',32,'example6@gamil.com','784951263','loremloremloremloremloremloremloremloremloremloremlorem','');
 
-INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
-VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
-INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
-VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
-INSERT INTO DEPARTMENT(ID,DEP_INFORMATION,CITY)
-VALUES (nextval('DEPARTMENT_SEQ'),'LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM','KHUJAND');
+INSERT INTO TEAM(ID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE_NUMBER, BIO, PHOTOS)
+VALUES (nextval('TEAM_SEQ'),'Thomas','Wilson',32,'example6@gamil.com','784951263','loremloremloremloremloremloremloremloremloremloremlorem','');
 
 
 INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
-VALUES (1,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+VALUES (nextval('PATIENT_SEQ'),'Lore','Claud',26,'lore@gmail.com','123456','some text','1997-03-21',true);
 
 INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
-VALUES (2,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+VALUES (nextval('PATIENT_SEQ'),'Smith','Mike',26,'smith2@gmail.com','654321','some text','2000-06-21',false);
 
 INSERT INTO PATIENT(ID,FIRSTNAME,LASTNAME,AGE,EMAIL,PHONE_NUMBER,BIO,LAST_VISIT,IS_NEW_CLIENT)
-VALUES (3,'Lore','Claud',26,'lore@gmail.com','123456789','some text','2021-03-21',true);
+VALUES (nextval('PATIENT_SEQ'),'Jack','Fred',26,'jack3@gmail.com','789465','some text','2021-03-21',true);
 
 
 INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (1, 1);
@@ -182,11 +178,12 @@ INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (3, 2);
 INSERT INTO TEAM_PATIENTS (TEAMS_ID, PATIENTS_ID) VALUES (1, 3);
 
 
-INSERT INTO USER
+
+INSERT INTO PARTYUSER
 (ID, username, password, role)
 VALUES
     (nextval('USER_SEQ'), 'admin', '$2a$10$Vl/0CHuhqMalmJvKHbzbDOH5VfvSiiLg2PfzeO2RJX7qXqUvRAbHu', 'ROLE_ADMIN');
-INSERT INTO USER
+INSERT INTO PARTYUSER
 (ID, username, password, role)
 VALUES
     (nextval('USER_SEQ'), 'Jansen', '$2a$10$3XY.2x3nSJ6D8yW6Nrhb5ewVOB3mv7Op0nmW59RAozRp6FyQlwbrG', 'ROLE_USER');

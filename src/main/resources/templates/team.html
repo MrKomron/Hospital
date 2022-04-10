@@ -14,7 +14,7 @@
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
 <img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
 
-<h1 class="headline-about">Doctors</h1>
+<h1 class="headline-about">Team</h1>
 
 <div class="bread-crumb-line">
     <ul class="line">
@@ -23,11 +23,12 @@
     </ul>
 </div>
 
-<div class="services-style" th:each="team : ${teams}">
+<div class="team-style" th:each="team : ${teams}">
+    <img class="userc" th:src="@{/img/userc.jpg}"><br>
     <a th:href="@{'/teamdetails/' + ${team.getId()}}">
         <span th:text="${team.getFirstname()}+' '+${team.getLastname()}">Firstname and Lastname</span>
-        <span th:text="${team.getEmail()}">Email</span>
     </a>
+    <span th:text="${team.getEmail()}">Email</span>
 </div>
 
 

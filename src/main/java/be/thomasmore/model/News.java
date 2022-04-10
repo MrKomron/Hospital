@@ -7,9 +7,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Entity
+@Table(name = "NEWS")
 public class News {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "news_generator")
-    @SequenceGenerator(name = "news_generator", sequenceName = "news_seq", allocationSize = 1)
+    @SequenceGenerator(name = "news_generator", sequenceName = "news_seq",  initialValue=1, allocationSize = 1)
     @Id
     private Integer id;
     private String name;
@@ -21,8 +22,6 @@ public class News {
 
     public News() {
     }
-
-
 
     public Integer getId() {
         return id;

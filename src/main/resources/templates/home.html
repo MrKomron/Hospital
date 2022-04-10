@@ -94,32 +94,6 @@
 <!--OPENING HOURS-->
 <div class="open-hours" th:style="'background: url(/img/2.jpg); z-index:-1; height:800px'">
     <div>
-        <form action="">
-            <h1>Make an appointment</h1>
-            <div>
-                <label for="firstname" class="appointment-context">Firstname: </label>
-                <input type="text" id="firstname" class="input-style">
-            </div>
-            <div>
-                <label for="lastname" class="appointment-context">Lastname: </label>
-                <input type="text" id="lastname" class="input-style">
-            </div>
-            <div>
-                <label for="phonenumber" class="appointment-context">Phonenumber: </label>
-                <input type="tel" id="phonenumber" class="input-style">
-            </div>
-            <div>
-                <label for="department" class="appointment-context">Department: </label>
-                <input type="text" id="department" class="input-style">
-            </div>
-            <div>
-                <label for="date" class="appointment-context">Date: </label>
-                <input type="date" id="date" class="input-style">
-            </div>
-            <div>
-                <input type="submit" class="submit-button" value="submit">
-            </div>
-        </form>
         <div class="working-hours">
             <h1>Opening hours</h1>
                 <p class="open-h-txt">Here is our opening hours. We always try to help our clients as soon as possible. For urgently questions you can call to us.</p>
@@ -127,7 +101,6 @@
             <span>Saturday-Sonday Closed</span>
             </div>
     </div>
-
 </div>
 <br>
 
@@ -145,20 +118,23 @@
 <!--OUR EXPERT DOCTORS-->
 <div class="doctors">
     <h1>Our Expert Doctors</h1>
-    <div class="doctors-style" th:each="doc : ${doctors}">
-        <p th:text="${doc.getFirstname()}">firstname and lastname</p><br>
-<!--        <a href="#" >More information</a>-->
-    </div>
+    <div class="team-style" th:each="team : ${teams}">
+        <img class="userc" th:src="@{/img/userc.jpg}"><br>
+        <a th:href="@{'/teamdetails/' + ${team.getId()}}">
+            <span th:text="${team.getFirstname()}+' '+${team.getLastname()}">Firstname and Lastname</span>
+        </a>
+        <span th:text="${team.getEmail()}">Email</span>
     </div>
 </div>
+
 
 
 <!-- LATEST NEWS-->
 <div class="news">
     <h1>Latest News</h1>
     <div class="news-style-home" th:each="news : ${news}">
+        <img class="resize-news" th:src="@{/img/1.jpeg}"><br>
         <a th:href="@{'/newsdetails/' + ${news.getId()}}">
-            <img class="resize-news" th:src="@{/img/1.jpeg}" alt=""><br>
             <span th:text="${news.getName()}">firstname and lastname</span>
         </a>
     </div>

@@ -4,16 +4,19 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
+@Table(name = "SERVICES")
 public class Services {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "services_generator")
-    @SequenceGenerator(name = "services_generator", sequenceName = "services_seq", allocationSize = 1)
+    @SequenceGenerator(name = "services_generator", sequenceName = "services_seq",  initialValue=1 , allocationSize = 1)
     @Id
     private Integer id;
     @NotBlank
     private String name;
     @Column(length = 10000)
+    @NotBlank
     private String procInformation;
     @Column(length = 10000)
+    @NotBlank
     private String canInformation;
 
 

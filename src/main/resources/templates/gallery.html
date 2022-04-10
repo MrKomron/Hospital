@@ -15,7 +15,36 @@
 </head>
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
-    <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
+<img th:src="@{/img/about-banners.jpg}" th:style="'z-index:-1'" class="about-hos">
+
+<h1 class="headline-about">Gallery</h1>
+
+<div class="bread-crumb-line">
+    <ul class="line">
+        <li><a th:href="@{home}">home</a></li>
+        <li>/pages</li>
+        <li>/gallery</li>
+    </ul>
+</div>
+    <div class="images">
+        <img th:src="@{/img/i1.jpg}">
+        <img th:src="@{/img/i3.jpg}">
+        <img th:src="@{/img/i4.jpg}">
+        <img th:src="@{/img/i3.jpg}">
+        <img th:src="@{/img/i1.jpg}"><br>
+        <img th:src="@{/img/i4.jpg}">
+        <img th:src="@{/img/i1.jpg}">
+        <img th:src="@{/img/i4.jpg}">
+        <img th:src="@{/img/i3.jpg}">
+        <img th:src="@{/img/i1.jpg}"><br>
+        <img th:src="@{/img/i1.jpg}">
+        <img th:src="@{/img/i3.jpg}">
+        <img th:src="@{/img/i4.jpg}">
+        <img th:src="@{/img/i3.jpg}">
+        <img th:src="@{/img/i1.jpg}">
+
+    </div>
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

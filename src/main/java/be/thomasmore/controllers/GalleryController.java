@@ -20,14 +20,11 @@ public class GalleryController {
 ////    @Autowired
 ////    private ItemsRepository itemsRepository;
 //
-//    @GetMapping({"/gallery"})
-//    public String gallery(Model model){
-//        LocalDateTime now = LocalDateTime.now();
-//        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy");
-//        String formatDateTime = now.format(format);
-//        model.addAttribute("dateNow",formatDateTime);
-//        return "gallery";
-//    }
+    @GetMapping({"/gallery"})
+    public String gallery(Model model){
+
+        return "gallery";
+    }
 //
 //    @GetMapping({"/edit-pokemon","/edit-pokemon/{pokemon"})
 //    public String editParty(@PathVariable(required = false)int pokemonId,Model model){

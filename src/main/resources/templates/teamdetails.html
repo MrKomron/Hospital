@@ -12,8 +12,67 @@
 </head>
 <body>
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
-<div th:replace="fragment/samecode :: navbar">Hier komt de header</div><div class="row1">
+<div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
 
+    <div class="serv-details"  th:if="${teams}">
+        <div class="serv-details-buttons">
+            <div th:if="${prev!=null}">
+                <a class="prev-serv-detail" th:href="@{'/teamdetails/' + ${prev}}"><i class="fa-solid fa-angles-left"></i>prev</a>
+            </div>
+            <div th:if="${next!=null}">
+                <a class="next-serv-detail" th:href="@{'/teamdetails/' + ${next}}">next<i class="fa-solid fa-angles-right"></i></a>
+            </div>
+        </div>
+
+        <div class="main-team-content">
+            <img th:src="@{/img/userc.jpg}">
+            <div>
+                <span class="one">Firstname:</span>
+                <span th:text="${teams.getFirstname()}"></span>
+            </div>
+            <div>
+                <span class="one">Lastname:</span>
+                <span th:text="${teams.getLastname()}"></span>
+            </div>
+            <div>
+                <span class="one">Email:</span>
+                <span th:text="${teams.getEmail()}"></span>
+            </div>
+            <div>
+                <span class="one">Phone number:</span>
+                <span th:text="${teams.getPhoneNumber()}"></span>
+            </div>
+            <div>
+                <span class="one">Bio:</span>
+                <span th:text="${teams.getBio()}"></span>
+            </div>
+            <div>
+                <span class="one">Age:</span>
+                <span th:text="${teams.getAge()}"></span>
+            </div>
+        </div>
+    </div>
+<div sec:authorize="hasRole('ADMIN')">
+    <div th:if="${teams.getPatients().size()}>0" class="patients">
+        <h2>Clients</h2>
+        <div th:each="patient: ${teams.getPatients()}">
+            <a class="buttonLook mediumButton" th:href="@{'/patientdetails/'+${patient.getId()}}">
+                <span th:text="${patient.getLastname()}">artist name</span>
+            </a>
+        </div>
+    </div>
+    <div th:unless="${teams.getPatients().size()}">
+        <span>No patients yet. ☺</span>
+    </div>
+
+</div>
+
+    <div class="null" th:if="${id==null}">
+        <p th:text="${noserv}">no services was chosen</p>
+    </div>
+    <div class="big-index" th:if="${id!=null}">
+        <p th:text="${message}">service index is not correct</p>
+    </div>
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>
 </html>

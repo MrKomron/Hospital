@@ -20,26 +20,29 @@ public class TeamController {
     private TeamRepository teamRepository;
 
     @GetMapping({"/team/{extraword}","/team"})
-    public String servicesFilter(Model model, @RequestParam(required = false) String keyword) {
-//        Iterable<Team> services = teamRepository.findByKeyword(keyword);
+    public String servicesFilter(Model model) {
         Iterable<Team> teams = teamRepository.findAll();
-//        model.addAttribute("keyword", keyword);
-//        model.addAttribute("services", services);
         model.addAttribute("teams", teams);
-//        model.addAttribute("nrServices", ((Collection<?>) services).size());
-        model.addAttribute("filter", true);
         return "team";
     }
 
 
-    @GetMapping({"/teamdetails", "/teamdetails/{id}"})
-    public String animalDetails(Model model, @PathVariable(required = false) Integer id) {
-        if (id==null) return "teamdetails";
-        Optional<Team> optionalAnimal = teamRepository.findById(id);
+    @GetMapping({"/teamdetails/{id}", "/teamdetails"})
+    public String servicesDetails(Model model, @PathVariable(required = false) Integer id) {
+        if (id==null) {
+            model.addAttribute("noserv","You did not choose an index for service. Please choose it!");
+            return "teamdetails";
+        }
+        Optional<Team> optionalTeam = teamRepository.findById(id);
         Optional<Team> optionalPrev = teamRepository.findFirstByIdLessThanOrderByIdDesc(id);
         Optional<Team> optionalNext = teamRepository.findFirstByIdGreaterThanOrderById(id);
-        if (optionalAnimal.isPresent()) {
-            model.addAttribute("team", optionalAnimal.get());
+        if (optionalTeam.isPresent()) {
+            Team t = optionalTeam.get();
+            model.addAttribute("teams", t);
+        }else{
+            int max=teamRepository.findFirstByOrderByIdDesc().get().getId();
+            int min=teamRepository.findFirstByOrderByIdAsc().get().getId();
+            model.addAttribute("message","Index is between"+min+" and "+max);
         }
         if (optionalPrev.isPresent()) {
             model.addAttribute("prev", optionalPrev.get().getId());
@@ -53,4 +56,5 @@ public class TeamController {
         }
         return "teamdetails";
     }
+
 }

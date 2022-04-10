@@ -33,22 +33,24 @@
                     <div class="dropdown-content">
                         <a th:href="@{/gallery}">Gallery</a>
                         <a th:href="@{/team}">Team</a>
-                        <a th:href="@{/careers}">Careers</a>
-                        <a th:href="@{/partners}">Partners</a>
+                        <a sec:authorize="hasRole('ADMIN')" th:href="@{/admin/patients}">Patients</a>
                         <a th:href="@{/faq}">FAQ</a>
                     </div>
                 </div>
             </li>
             <li><a class="btn-navbar" th:href="@{/news}">News</a></li>
             <li><a class="btn-navbar distance" th:href="@{/contact}">Contact</a></li>
-            <li  sec:authorize="isAuthenticated()"><a class="appointment" th:href="@{/appointment}">Appointment</a></li>
+            <li sec:authorize="isAuthenticated()"><a class="appointment" th:href="@{/contact}">Appointment</a></li>
             <li class="login-button" th:replace="fragment/user :: loginmenu"></li>
             <li th:replace="fragment/user :: logoutmenu"></li>
 
     </ul>
 </div>
 
-<div th:fragment="footer" class="footer">
+<div th:fragment="footer">
+    <div class="space">
+
+
     <div class="footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -72,27 +74,17 @@
                 <ul>
                     <a th:href="@{/about}"><li>About</li></a>
                     <a th:href="@{/services}"><li>Services</li></a>
-                    <a th:href="@{/pages}"><li>Pages</li></a>
                     <a th:href="@{/news}"><li>News</li></a>
                     <a th:href="@{/contact}"><li>Contact</li></a>
 
                 </ul>
-            </div>
-            <div class="footer-section contact-form">
-                <h2>Contact us</h2>
-                <form action="index.html" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Tour email">
-                    <textarea name="message" placeholder="Yout message" class="text-input contact-input"></textarea>
-                    <button type="submit" class="btn-big">
-                    <i class="fas fa-envelope"></i>
-                        Send</button>
-                </form>
             </div>
         </div>
         <div class="footer-bottom">
             &copy Husnoro.com | All rights reserved
         </div>
     </div>
+</div>
 </div>
 
 </body>

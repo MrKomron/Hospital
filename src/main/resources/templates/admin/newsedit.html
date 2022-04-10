@@ -16,24 +16,28 @@
 <div th:replace="fragment/samecode :: top">Hier komt de header</div>
 <div th:replace="fragment/samecode :: navbar">Hier komt de header</div>
 
-<div class="row1">
-  <div class="row1content" th:object="${news}">
+
+  <div class="stop-serv" th:object="${news}">
     <div th:if="${news}" class="editButtonDiv">
-      <a class="buttonLook smallButton" th:href="@{'/newsdetails/' + ${news.id}}">back</a>
+      <a class="go-back" th:href="@{'/newsdetails/' + ${news.id}}">back</a>
     </div>
     <div th:if="${news}">
-      <form th:action="@{|/admin/newsedit/${news.id}|}" method="post">
-        <div class="oneinput saveButtonDiv">
+      <form class="stay-in-row" th:action="@{|/admin/newsedit/${news.id}|}" method="post">
+        <div class="saving-s">
           <input type="submit" value="save" class="smallButton buttonLook">
         </div>
-        <label for="name">Name : </label>
-        <input type="text" id="name" name="newsName" th:value="${news.name}"><br>
-        <label for="text">Text : </label>
-        <textarea id="text" name="text" th:text="${news.text}"></textarea>
+        <div class="name-long">
+          <label for="name">Name : </label>
+          <input type="text" id="name" name="newsName" th:value="${news.name}">
+        </div>
+        <div class="nedit-area">
+          <label for="text">Text : </label>
+          <textarea id="text" name="text" th:text="${news.text}"></textarea>
+        </div>
       </form>
     </div>
   </div>
-</div>
+
 
 <div th:replace="fragment/samecode :: footer">Hier komt de footer</div>
 </body>

@@ -26,7 +26,6 @@ public class FaqController {
         model.addAttribute("question", question);
         model.addAttribute("faqs", faqs);
         model.addAttribute("faq", faq);
-//        model.addAttribute("nrFaqs", ((Collection<?>) faqs).size());
         model.addAttribute("filter", true);
         return "faq";
     }

@@ -38,11 +38,11 @@ public class ServicesController {
             model.addAttribute("noserv","You did not choose an index for service. Please choose it!");
             return "servicesdetails";
         }
-        Optional<Services> optionalVenue = servicesRepository.findById(id);
+        Optional<Services> optionalServices = servicesRepository.findById(id);
         Optional<Services> optionalPrev = servicesRepository.findFirstByIdLessThanOrderByIdDesc(id);
         Optional<Services> optionalNext = servicesRepository.findFirstByIdGreaterThanOrderById(id);
-        if (optionalVenue.isPresent()) {
-            Services s = optionalVenue.get();
+        if (optionalServices.isPresent()) {
+            Services s = optionalServices.get();
             model.addAttribute("services", s);
         }else{
             int max=servicesRepository.findFirstByOrderByIdDesc().get().getId();

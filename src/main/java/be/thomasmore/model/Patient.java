@@ -7,7 +7,10 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
+@Table(name = "PATIENT")
 public class Patient {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "patient_generator")
+    @SequenceGenerator(name = "patient_generator", sequenceName = "patient_seq", initialValue=1, allocationSize = 1)
     @Id
     private Integer id;
     private String firstname;

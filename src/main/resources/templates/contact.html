@@ -29,29 +29,32 @@
 
 <h2>Get Touch With Us</h2>
 <div class="contacts">
-<form action="">
+    <div th:if="${session.message}" th:classappend="${session.message}" class="alert alert-success" role="alert">
+        <p th:text="${session.message}"></p>
+        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+    </div>
+<form th:action="@{/registration}"  method="post">
     <h5>Make an appointment</h5>
     <div class="main-field">
         <label for="firstname"></label>
         <input type="text" name="firstname" id="firstname" placeholder="Firstname">
         <label for="lastname"></label>
-        <input type="text" name="firstname" id="lastname" placeholder="Lastname"><br>
+        <input type="text" name="lastname" id="lastname" placeholder="Lastname"><br>
         <label for="email"></label>
-        <input type="email" name="firstname" id="email" placeholder="Email">
+        <input type="email" name="email" id="email" placeholder="Email">
         <label for="tel"></label>
-        <input type="tel" name="firstname" id="tel" placeholder="Phone number"><br>
+        <input type="tel" name="phoneNumber" id="tel" placeholder="Phone number"><br>
+        <label for="address"></label>
+        <input type="text" name="address" id="address" placeholder="Address">
+        <label for="sex1">Male</label>
+        <input type="radio" name="gender" id="sex1">
+        <label for="sex">Female</label>
+        <input type="radio" name="gender" id="sex"><br>
     </div>
         <label for="date"></label>
         <input type="date" name="date" id="date" class="date">
         <label for="time"></label>
-        <input type="time" name="date" id="time" class="time"><br>
-        <select>
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="orange">Orange</option>
-            <option value="pear">Pear</option>
-        </select>
-
+        <input type="time" name="time" id="time" class="time">
     <input type="submit" value="Submit" class="button-appointment">
 </form>
 </div>
@@ -68,9 +71,6 @@
     <h3><i class="fa-solid fa-calendar-days fa-1x"></i>Opening hours</h3>
     <hr>
     <ul>
-        <li>MonFri: 8:00am6:00pm</li>
-        <li>Sat: 9:00am3:00pm</li>
-        <li>Sun: 10:00am2:00pm</li>
         <li>MonFri: 8:00am6:00pm</li>
         <li>Sat: 9:00am3:00pm</li>
         <li>Sun: 10:00am2:00pm</li>

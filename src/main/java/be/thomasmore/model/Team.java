@@ -4,7 +4,10 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+@Table(name = "TEAM")
 public class Team {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "team_generator")
+    @SequenceGenerator(name = "team_generator", sequenceName = "team_seq", initialValue=1, allocationSize = 1)
     @Id
     private Integer id;
     private String firstname;

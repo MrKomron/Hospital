@@ -8,26 +8,36 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
+import java.util.Date;
 import java.util.Optional;
 
 @Controller
 public class NewsController {
     @Autowired
     private NewsRepository newsRepository;
-    @GetMapping({"/news"})
-    public String news(Model model){
-        Iterable<News> optionalNews = newsRepository.findAll();
-        model.addAttribute("newsall", optionalNews);
+
+
+    @GetMapping({"/news/{extraword}","/news"})
+    public String filterNews(Model model, @RequestParam(required = false) String nameandtext) {
+        Iterable<News> news = newsRepository.findByNameAndText(nameandtext);
+        Iterable<News> newnews = newsRepository.findAll();
+        model.addAttribute("keyword", nameandtext);
+        model.addAttribute("news", news);
+        model.addAttribute("newnews", newnews);
+        model.addAttribute("nrNews", ((Collection<?>) news).size());
+        model.addAttribute("filter", true);
         return "news";
     }
 
     @GetMapping({"/newsdetails/{id}", "/newsdetails"})
     public String newsDetails(Model model, @PathVariable(required = false) Integer id) {
         if (id==null) {
-            model.addAttribute("nonews","You did not choose an index for news. Please choose it!");
+            model.addAttribute("nonews","You did not choose an index for service. Please choose it!");
             return "newsdetails";
         }
         Optional<News> optionalNews = newsRepository.findById(id);
